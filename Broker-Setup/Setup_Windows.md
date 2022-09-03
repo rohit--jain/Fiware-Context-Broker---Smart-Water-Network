@@ -15,25 +15,28 @@ In case you encounter network inaccessibility issues you will have to follow 2 s
 [1] Restart your Debian app<br>
 [2] 
 
-## Step 4: Install Broker from GitHub
+## Step 4: Install Docker in Debian App
+Follow the instructions at: https://docs.docker.com/engine/install/debian/
+ 
+## Step 5: Install Broker from GitHub
 Usually Debian comes with pre installed Git. Since our implementation specifically focuses on NGSI-LD version, you can read more about it at:  https://github.com/FIWARE/tutorials.Getting-Started/tree/NGSI-LD.<br>
 To install follow steps at https://github.com/FIWARE/tutorials.Getting-Started/tree/NGSI-LD#start-up and run these commands in your Debian app
 
-## Step 5: Start Broker
+## Step 6: Start Broker
 Restart your Debian app and run **"sudo ./services scorpio"**<br>
 This will takes few minutes to setup on first time and after installation and startup, it stays as a background service and you should be able to access back to your command console automatically.
 
-## Step 6: Get your Broker's IP address
+## Step 7: Get your Broker's IP address
 For the first time setup you may need to install **net-tools** package with command **"sudo apt install net-tools"**<br>
 After installation you should be able to run command **"ifconfig"**. <br>
 In the command trace you can locate **"eth0:"** which will contain **"inet"** with the mention of the IP-address.<br>
 IP-address would be required for connecting apps outside Debian to your broker with path: **http://[Broker-IP-address]:9090/** <br>
 Note that IP-address gets changed after every reboot of the Debian app.<br>
 
-## Step 7: Test Broker from Browser
+## Step 8: Test Broker from Browser
 Open any browser and type in address bar: **http://[Broker-IP-address]:9090/** and you should see white webpage with heading **"Whitelabel Error Page"** with current date and time in the next lines. This indicates that the Broker is up and running and accessible outside Debian app on Windows.
 
-## Step 8: Test your Broker with a Test Entity 
+## Step 9: Test your Broker with a Test Entity 
 In Debian app command shell use following CURL command:<br>
 ```
 curl http://localhost:9090/ngsi-ld/v1/entities -s -S -H 'Content-Type: application/ld+json' -d @- <<EOF
@@ -61,13 +64,13 @@ If it runs correctly there should be blank response and no error message in outp
 **Note [1]:** If you executed this CURL command in past you will get error message about entity already exists, which still indicates normal functioning of Broker.<br>
 **Note [2]:** You can replace localhost with Broker-IP-Address for running outside Debian app.<br>
 
-## Step 9: To delete a pre-existing entity
+## Step 10: To delete a pre-existing entity
 Suppose you want to delete the previous inserted entity, you can use the following CURL command: <br>
 ```
 curl http://[Broker-IP-address]:9090/ngsi-ld/v1/entities/house2:smartrooms:room2 -X DELETE 
 ```
 
-## Step 10: Checking Scorpio Broker logs
+## Step 11: Checking Scorpio Broker logs
 In Debian app run the following command: **"sudo docker compose logs scorpio"**
 
 ## Known Issue 1: Too much RAM consumption > 5GB!
