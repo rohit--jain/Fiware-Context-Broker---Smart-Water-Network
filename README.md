@@ -11,4 +11,4 @@ For more details see https://github.com/smart-data-models/SmartWater. This Smart
 
 Python Application 1 uses pre generated simulated data for following elements of standard water distribution network - junctions, tanks, reservoirs, pipes, pumps, curves and patterns and interacts with Context Broker through REST API
 
-Python Application 2 generates runtime simulated data for Valve () and sends to Scorpio Context Broker. This is an adaptation from a real full scale demonstration test rig (see testrig.jpg) with Tank, Reservoir, Pump, Valves, Pressure Guage, etc to send realtime data to Context Broker
+Python Application 2 generates runtime simulated data for 1 Valve and sends to Scorpio Context Broker. This is an adaptation from a real full scale demonstration test rig (see testrig.jpg) with Tank, Reservoir, Pump, Valves, Pressure Guage, etc to send realtime data to our remote Context Broker
