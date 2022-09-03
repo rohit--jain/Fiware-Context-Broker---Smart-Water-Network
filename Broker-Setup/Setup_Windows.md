@@ -86,4 +86,5 @@ That should stop all running docker containers for Broker.<br>
 Once done, go to your windows command prompt and type **"wsl --shutdown"**
 
 ## Reference Tutorials
-The tutorials for NGSI-LD and FIWARE are here: https://ngsi-ld-tutorials.readthedocs.io/en/latest/
+The tutorials for NGSI-LD and FIWARE are here: https://ngsi-ld-tutorials.readthedocs.io/en/latest/<br>
+More information on Scorpio Broker: https://github.com/ScorpioBroker/ScorpioBroker
