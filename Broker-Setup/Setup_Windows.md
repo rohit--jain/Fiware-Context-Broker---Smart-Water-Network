@@ -10,7 +10,7 @@ To install WSL on Windows follow the steps mention in Microsoft's website: https
 Go to Windows Store and Search "Debian", that should direct you to Debian app as shown in Screenshot "DebianWindowsStore.JPG". Install it & open it -> this may take few minutes
 
 ## Step 3: Update Packages in Debian App
-In command shell of Debian app run **sudo apt update**<br>
+In command shell of Debian app run **"sudo apt update"**<br>
 In case you encounter network inaccessibility issues you will have to follow 2 steps:<br>
 [1] Restart your Debian app<br>
 [2] 
@@ -20,10 +20,11 @@ Usually Debian comes with pre installed Git. Since our implementation specifical
 To install follow steps at https://github.com/FIWARE/tutorials.Getting-Started/tree/NGSI-LD#start-up and run these commands in your Debian app
 
 ## Step 5: Start Broker
-Restart your Debian app and run **sudo ./services scorpio**
+Restart your Debian app and run **"sudo ./services scorpio"**
  
 ## Step 6: Test your Broker with a Test Entity 
 In Debian app command shell use following CURL command:<br>
+```
 curl http://localhost:9090/ngsi-ld/v1/entities -s -S -H 'Content-Type: application/ld+json' -d @- <<EOF
 {<br>
   "id": "house2:smartrooms:room2",<br>
@@ -44,6 +45,7 @@ curl http://localhost:9090/ngsi-ld/v1/entities -s -S -H 'Content-Type: applicati
   "@context": [{"Room": "urn:mytypes:room", "temperature": "myuniqueuri:temperature", "isPartOf": "myuniqueuri:isPartOf"},"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"]<br>
 }<br>
 EOF<br>
+```
 If it runs correctly there should be blank response and no error message in output.<br>
 **Note:** If you executed this CURL command in past you will get error message about entity already exists, which still indicates normal functioning of Broker.
 
@@ -51,10 +53,10 @@ If it runs correctly there should be blank response and no error message in outp
 When broker is setup initially it consumes several GBs of RAM, however much of the RAM gets freed during prolonged usage or after restart of app
 
 ## Known Issue 2: After Debian App restart Broker doesn't start because Docker doesn't start without Systemd in WSL
-There are many ways to fix this problem. Most frequently **sudo service docker start** enables Docker running as a background service.<br>
+There are many ways to fix this problem. Most frequently **"sudo service docker start"** enables Docker running as a background service.<br>
 Another issue can be Fstab complain, for this checkout: https://stackoverflow.com/questions/49397435/docker-start-failed-because-etc-fstab-not-found 
 
 ## Known Issue 3: How to safely shutdown Broker
-Inside command shell of Debian type **sudo ./services stop**<br>
+Inside command shell of Debian type **"sudo ./services stop"**<br>
 That should stop all running docker containers for Broker.<br>
-Once done, go to your windows command prompt and type **wsl --shutdown**
+Once done, go to your windows command prompt and type **"wsl --shutdown"**
