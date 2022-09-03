@@ -26,25 +26,25 @@ Restart your Debian app and run **"sudo ./services scorpio"**
 In Debian app command shell use following CURL command:<br>
 ```
 curl http://localhost:9090/ngsi-ld/v1/entities -s -S -H 'Content-Type: application/ld+json' -d @- <<EOF
-{<br>
-  "id": "house2:smartrooms:room2",<br>
-  "type": "Room",<br>
-  "temperature": {<br>
-        "value": 21,<br>
-        "unitCode": "CEL",<br>
-        "type": "Property",<br>
-        "providedBy": {<br>
-                "type": "Relationship",<br>
-                "object": "smartbuilding:house2:sensor4711"<br>
-        }<br>
-  },<br>
-  "isPartOf": {<br>
-        "type": "Relationship",<br>
-        "object": "smartcity:houses:house2"<br>
-  },<br>
-  "@context": [{"Room": "urn:mytypes:room", "temperature": "myuniqueuri:temperature", "isPartOf": "myuniqueuri:isPartOf"},"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"]<br>
-}<br>
-EOF<br>
+{
+  "id": "house2:smartrooms:room2",
+  "type": "Room",
+  "temperature": {
+        "value": 21,
+        "unitCode": "CEL",
+        "type": "Property",
+        "providedBy": {
+                "type": "Relationship",
+                "object": "smartbuilding:house2:sensor4711"
+        }
+  },
+  "isPartOf": {
+        "type": "Relationship",
+        "object": "smartcity:houses:house2"
+  },
+  "@context": [{"Room": "urn:mytypes:room", "temperature": "myuniqueuri:temperature", "isPartOf": "myuniqueuri:isPartOf"},"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"]
+}
+EOF
 ```
 If it runs correctly there should be blank response and no error message in output.<br>
 **Note:** If you executed this CURL command in past you will get error message about entity already exists, which still indicates normal functioning of Broker.
