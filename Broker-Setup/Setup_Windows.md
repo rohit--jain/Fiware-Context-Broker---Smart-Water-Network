@@ -61,6 +61,9 @@ If it runs correctly there should be blank response and no error message in outp
 **Note [1]:** If you executed this CURL command in past you will get error message about entity already exists, which still indicates normal functioning of Broker.<br>
 **Note [2]:** You can replace localhost with Broker-IP-Address for running outside Debian app.<br>
 
+## Step 9: Checking Scorpio Broker logs
+In Debian app run the following command: **"sudo docker compose logs scorpio"**
+
 ## Known Issue 1: Too much RAM consumption > 5GB!
 When broker is setup initially it consumes several GBs of RAM, however much of the RAM gets freed (probably garbage collected over time from JAVA SpringBoot components of Broker) during prolonged usage or after restart of app
 
