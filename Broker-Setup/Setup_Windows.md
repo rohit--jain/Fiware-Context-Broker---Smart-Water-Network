@@ -61,7 +61,13 @@ If it runs correctly there should be blank response and no error message in outp
 **Note [1]:** If you executed this CURL command in past you will get error message about entity already exists, which still indicates normal functioning of Broker.<br>
 **Note [2]:** You can replace localhost with Broker-IP-Address for running outside Debian app.<br>
 
-## Step 9: Checking Scorpio Broker logs
+## Step 9: To delete a pre-existing entity
+Suppose you want to delete the previous inserted entity, you can use the following CURL command: <br>
+```
+curl http://[Broker-IP-address]:9090/ngsi-ld/v1/entities/house2:smartrooms:room2 -X DELETE 
+```
+
+## Step 10: Checking Scorpio Broker logs
 In Debian app run the following command: **"sudo docker compose logs scorpio"**
 
 ## Known Issue 1: Too much RAM consumption > 5GB!
