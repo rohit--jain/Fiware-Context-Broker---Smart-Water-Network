@@ -12,6 +12,7 @@ This repo presents a sample application which demonstrates use of Smart Data Mod
 For more details see https://github.com/smart-data-models/SmartWater. The smart data model contains current state information and metadata of water netwok entites like **junctions**, **tanks**, **reservoirs**, **pipes**, **pumps**, **curves**, **Valves**, etc. This **Smart Data Model** is then fed to **FIWARE's Scorpio Context Broker**, see more details: https://scorpio.readthedocs.io/en/latest/ and we can later perform CRUD operations on these entites through REST API queries. You can find more details about **entities** of **Water Distribution Management EPANET** at: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/tree/master
 
 ## How to Setup Context Broker on Windows
+Basic steps to setup Context Broker on Docker with Debian Windows Store App
 
 ## About Sample Application 1
 Python Application 1 uses pre generated simulated data for following elements of standard water distribution network - **junctions**, **tanks**, **reservoirs**, **pipes**, **pumps**, **curves** and **patterns** and interacts with Context Broker through **REST API**
