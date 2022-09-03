@@ -50,7 +50,7 @@ If it runs correctly there should be blank response and no error message in outp
 **Note:** If you executed this CURL command in past you will get error message about entity already exists, which still indicates normal functioning of Broker.
 
 ## Known Issue 1: Too much RAM consumption > 5GB!
-When broker is setup initially it consumes several GBs of RAM, however much of the RAM gets freed during prolonged usage or after restart of app
+When broker is setup initially it consumes several GBs of RAM, however much of the RAM gets freed (probably garbage collected over time from JAVA SpringBoot components of Broker) during prolonged usage or after restart of app
 
 ## Known Issue 2: After Debian App restart Broker doesn't start because Docker doesn't start without Systemd in WSL
 There are many ways to fix this problem. Most frequently **"sudo service docker start"** enables Docker running as a background service.<br>
