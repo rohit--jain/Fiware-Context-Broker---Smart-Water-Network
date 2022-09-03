@@ -1,4 +1,4 @@
-# FIWARE-Context-Broker---Smart-Water-Network
+# FIWARE-Context-Broker - Smart-Water-Network
 ## Sample Smart Water Model Network Simulation with FIWARE Scorpio Context Broker
 
 
@@ -9,7 +9,7 @@ The main concept involves seamless and interoperable data exchange among differe
 
 ## What do I present?
 This repo presents a sample application which demonstrates use of Smart Data Model with NGSI-LD standard from Water Distribution Management EPANET
-For more details see https://github.com/smart-data-models/SmartWater. The smart data model contains current state information and metadata of water netwok entites like **junctions**, **tanks**, **reservoirs**, **pipes**, **pumps**, **curves**, **Valves**, etc. This **Smart Data Model** is then fed to **FIWARE's Scorpio Context Broker**, see more details: https://scorpio.readthedocs.io/en/latest/ and we can later perform CRUD operations on these entites through REST API queries. You can find more details about **entities** of **Water Distribution Management EPANET** at the github site: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/tree/master
+For more details see https://github.com/smart-data-models/SmartWater. The smart data model contains current state information and metadata of water netwok entites like **junctions**, **tanks**, **reservoirs**, **pipes**, **pumps**, **curves**, **Valves**, etc. This **Smart Data Model** is then fed to **FIWARE's Scorpio Context Broker**, see more details: https://scorpio.readthedocs.io/en/latest/ and we can later perform CRUD operations on these entites through REST API queries. You can find more details about **entities** of **Water Distribution Management EPANET** at: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/tree/master
 
 ## How to Setup Context Broker on Windows
 
