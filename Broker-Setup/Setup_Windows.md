@@ -27,11 +27,11 @@ This will takes few minutes to setup on first time and after installation and st
 For the first time setup you may need to install **net-tools** package with command **"sudo apt install net-tools"**<br>
 After installation you should be able to run command **"ifconfig"**. <br>
 In the command trace you can locate **"eth0:"** which will contain **"inet"** with the mention of the IP-address.<br>
-IP-address would be required for connecting apps outside Debian to your broker with path: **http://<Broker-IP-address>:9090/** <br>
+IP-address would be required for connecting apps outside Debian to your broker with path: **http://[Broker-IP-address]:9090/** <br>
 Note that IP-address gets changed after every reboot of the Debian app.<br>
 
 ## Step 7: Test Broker from Browser
-Open any browser and type in address bar: **http://<Broker-IP-address>:9090/** and you should see white webpage with heading **"Whitelabel Error Page"** with current date and time in the next lines. This indicates that the Broker is up and running and accessible outside Debian app on Windows.
+Open any browser and type in address bar: **http://[Broker-IP-address]:9090/** and you should see white webpage with heading **"Whitelabel Error Page"** with current date and time in the next lines. This indicates that the Broker is up and running and accessible outside Debian app on Windows.
 
 ## Step 8: Test your Broker with a Test Entity 
 In Debian app command shell use following CURL command:<br>
