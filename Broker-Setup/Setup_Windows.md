@@ -17,7 +17,8 @@ Go to Windows Store and Search "Debian", that should direct you to Debian app as
 [3] Type "exit" and close and then reopen the Debian app again <br>
 
 ## Step 4: Install Docker in Debian App
-Follow the instructions at: https://docs.docker.com/engine/install/debian/
+Follow the instructions at: https://docs.docker.com/engine/install/debian/<br>
+If the Docker **Hello World** fails to run, check out **Known Issue 2** section in this page below
  
 ## Step 5: Install Broker from GitHub
 Usually Debian comes with pre installed Git. Since our implementation specifically focuses on NGSI-LD version, you can read more about it at:  https://github.com/FIWARE/tutorials.Getting-Started/tree/NGSI-LD.<br>
