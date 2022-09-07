@@ -91,7 +91,8 @@ When broker is setup initially it consumes several GBs of RAM, however much of t
 
 ## Known Issue 2: After Debian App restart Broker doesn't start because Docker doesn't start without Systemd in WSL
 There are many ways to fix this problem. Most frequently : ```sudo service docker start``` enables Docker running as a background service.<br>
-Another issue can be Fstab complain, for this checkout: https://stackoverflow.com/questions/49397435/docker-start-failed-because-etc-fstab-not-found 
+Another issue can be Fstab complain, for this checkout: https://stackoverflow.com/questions/49397435/docker-start-failed-because-etc-fstab-not-found <br>
+You may have to restart PC for changes to properly reflect
 
 ## Reference Tutorials
 The tutorials for NGSI-LD and FIWARE are here: https://ngsi-ld-tutorials.readthedocs.io/en/latest/<br>
