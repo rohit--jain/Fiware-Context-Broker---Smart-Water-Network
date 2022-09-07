@@ -14,8 +14,6 @@ For more details see https://github.com/smart-data-models/SmartWater. The smart 
 ## How to Setup Context Broker on Windows
 Basic steps to setup Context Broker on Docker with Debian Windows Store App
 
-## About Sample Application 1
+## About Sample Application
 Python Application 1 uses pre generated simulated data for following elements of standard water distribution network - **junctions**, **tanks**, **reservoirs**, **pipes**, **pumps**, **curves** and **patterns** and interacts with Context Broker through **REST API**
 
-## About Sample Application 2
-Python Application 2 generates runtime simulated data for 1 Valve and sends to Scorpio Context Broker. This is an adaptation from a real full scale demonstration test rig with Tank, Reservoir, Pump, Valves, Pressure Guage and PLC from National Instruments to monitor and control entire apparatus. Original script sent realtime data to our remote Context Broker.
