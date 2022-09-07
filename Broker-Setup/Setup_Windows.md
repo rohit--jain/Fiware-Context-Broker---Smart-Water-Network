@@ -82,7 +82,7 @@ In Debian app run the following command: ```sudo docker compose logs scorpio```
 ## Step 12: How to safely shutdown Broker
 [1] Inside command shell of Debian type : ```sudo ./services stop```<br>
 That should stop all running docker containers for Broker.<br>
-[2] To close the Debian app run the following command: ```exit```<br>
+[2] To close the Debian app run command: ```exit```<br>
 [3] Once Debian app is closed, go to your windows command prompt and type : ```wsl --shutdown```<br>
 This should also free up all the extra RAM consumed by WSL windows process.
 
