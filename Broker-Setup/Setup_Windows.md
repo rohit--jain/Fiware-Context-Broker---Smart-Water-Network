@@ -9,7 +9,10 @@ This will take some minutes to install and then require restart to complete full
 
 
 ## Step 2: Get Debian App from Windows Store
-Go to Windows Store and Search "Debian", that should direct you to Debian app as shown in Screenshot "DebianWindowsStore.JPG". Install it & open it -> this may take few minutes. At the end you would be prompted to setup Username & Password. After setup type "exit" and close and then reopen the Debian app again.
+Go to Windows Store and Search "Debian", that should direct you to Debian app as shown in Screenshot "DebianWindowsStore.JPG".<br>
+Install it & open it -> this may take few minutes.<br>
+At the end you would be prompted to setup Username & Password.<br>
+After setup type "exit" and close and then reopen the Debian app again.
 
 ## Step 3: Update Packages in Debian App
 [1] In command shell of Debian app run : ```sudo apt update```<br>
@@ -22,8 +25,8 @@ If the Docker **Hello World** fails to run, check out **"Known Issue 2"** sectio
  
 ## Step 5: Install Broker from GitHub
 Usually Debian comes with pre installed Git. Since our implementation specifically focuses on NGSI-LD version, you can read more about it at:  https://github.com/FIWARE/tutorials.Getting-Started/tree/NGSI-LD.<br>
-[1] First navigate to your home directory with ```cd /home``` and there create a new directory where you want to install your Broker
-[2] Then using Git, follow install steps mentioned at https://github.com/FIWARE/tutorials.Getting-Started/tree/NGSI-LD#start-up and run these commands in your Debian app
+[1] First navigate to your home directory with ```cd /home``` and there create a new directory where you want to install your Broker<br>
+[2] Then using Git, follow install steps mentioned at https://github.com/FIWARE/tutorials.Getting-Started/tree/NGSI-LD#start-up and run these commands in your Debian app<br>
 
 ## Step 6: Start Broker
 Restart your Debian app and run : ```sudo ./services scorpio```<br>
@@ -74,13 +77,13 @@ curl http://[Broker-IP-address]:9090/ngsi-ld/v1/entities/house2:smartrooms:room2
 ```
 
 ## Step 11: Checking Scorpio Broker logs
-In Debian app run the following command: : ```sudo docker compose logs scorpio```
+In Debian app run the following command: ```sudo docker compose logs scorpio```
 
 ## Step 12: How to safely shutdown Broker
 [1] Inside command shell of Debian type : ```sudo ./services stop```<br>
 That should stop all running docker containers for Broker.<br>
-[2] <br>
-[3] Once done, go to your windows command prompt and type : ```wsl --shutdown```<br>
+[2] To close the Debian app run the following command: ```exit```<br>
+[3] Once Debian app is closed, go to your windows command prompt and type : ```wsl --shutdown```<br>
 This should also free up all the extra RAM consumed by WSL windows process.
 
 ## Known Issue 1: Too much RAM consumption > 5GB!
