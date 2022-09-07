@@ -22,7 +22,8 @@ If the Docker **Hello World** fails to run, check out **"Known Issue 2"** sectio
  
 ## Step 5: Install Broker from GitHub
 Usually Debian comes with pre installed Git. Since our implementation specifically focuses on NGSI-LD version, you can read more about it at:  https://github.com/FIWARE/tutorials.Getting-Started/tree/NGSI-LD.<br>
-To install follow steps at https://github.com/FIWARE/tutorials.Getting-Started/tree/NGSI-LD#start-up and run these commands in your Debian app
+[1] First navigate to your home directory with ```cd /home``` and there create a new directory where you want to install your Broker
+[2] Then using Git, follow install steps mentioned at https://github.com/FIWARE/tutorials.Getting-Started/tree/NGSI-LD#start-up and run these commands in your Debian app
 
 ## Step 6: Start Broker
 Restart your Debian app and run : ```sudo ./services scorpio```<br>
@@ -75,17 +76,19 @@ curl http://[Broker-IP-address]:9090/ngsi-ld/v1/entities/house2:smartrooms:room2
 ## Step 11: Checking Scorpio Broker logs
 In Debian app run the following command: : ```sudo docker compose logs scorpio```
 
+## Step 12: How to safely shutdown Broker
+[1] Inside command shell of Debian type : ```sudo ./services stop```<br>
+That should stop all running docker containers for Broker.<br>
+[2] <br>
+[3] Once done, go to your windows command prompt and type : ```wsl --shutdown```<br>
+This should also free up all the extra RAM consumed by WSL windows process.
+
 ## Known Issue 1: Too much RAM consumption > 5GB!
 When broker is setup initially it consumes several GBs of RAM, however much of the RAM gets freed (probably garbage collected over time from JAVA SpringBoot components of Broker) during prolonged usage or after restart of app
 
 ## Known Issue 2: After Debian App restart Broker doesn't start because Docker doesn't start without Systemd in WSL
 There are many ways to fix this problem. Most frequently : ```sudo service docker start``` enables Docker running as a background service.<br>
 Another issue can be Fstab complain, for this checkout: https://stackoverflow.com/questions/49397435/docker-start-failed-because-etc-fstab-not-found 
-
-## Known Issue 3: How to safely shutdown Broker
-Inside command shell of Debian type : ```sudo ./services stop```<br>
-That should stop all running docker containers for Broker.<br>
-Once done, go to your windows command prompt and type : ```wsl --shutdown```
 
 ## Reference Tutorials
 The tutorials for NGSI-LD and FIWARE are here: https://ngsi-ld-tutorials.readthedocs.io/en/latest/<br>
