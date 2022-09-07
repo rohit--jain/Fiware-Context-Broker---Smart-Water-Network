@@ -9,13 +9,12 @@ This will take some minutes to install and then require restart to complete full
 
 
 ## Step 2: Get Debian App from Windows Store
-Go to Windows Store and Search "Debian", that should direct you to Debian app as shown in Screenshot "DebianWindowsStore.JPG". Install it & open it -> this may take few minutes
+Go to Windows Store and Search "Debian", that should direct you to Debian app as shown in Screenshot "DebianWindowsStore.JPG". Install it & open it -> this may take few minutes. At the end you would be prompted to setup Username & Password. After setup type "exit" and close and then reopen the Debian app again.
 
 ## Step 3: Update Packages in Debian App
-In command shell of Debian app run **"sudo apt update"**<br>
-In case you encounter network inaccessibility issues you will have to follow 2 steps:<br>
-[1] Restart your Debian app<br>
-[2] 
+[1] In command shell of Debian app run **"sudo apt update"**<br>
+[2] Then upgrade all packages with **"sudo apt upgrade -y"** <br>
+[3] Type "exit" and close and then reopen the Debian app again <br>
 
 ## Step 4: Install Docker in Debian App
 Follow the instructions at: https://docs.docker.com/engine/install/debian/
