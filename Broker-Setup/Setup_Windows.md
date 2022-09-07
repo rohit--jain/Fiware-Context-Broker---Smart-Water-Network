@@ -27,11 +27,11 @@ If the Docker **Hello World** fails to run, check out **"Known Issue 2"** sectio
 Usually Debian comes with pre installed Git. Since our implementation specifically focuses on NGSI-LD version, you can read more about it at:  https://github.com/FIWARE/tutorials.Getting-Started/tree/NGSI-LD.<br>
 [1] First navigate to your home directory with ```cd /home/<-YourUserName->``` and there create a new directory where you want to install your Broker<br>
 [2] Then using Git, follow install steps mentioned at https://github.com/FIWARE/tutorials.Getting-Started/tree/NGSI-LD#start-up and run these commands in your Debian app<br>
-[3] When you want to run for example, **Scorpio broker** use command: ```sudo ./services scorpio```<br>
+[3] When you want to run for example, **Orion broker** use command: ```sudo ./services orion```<br>
 During the first startup it will take several minutes to download and initialize configurations before the startup completes.
 
-## Step 6: Start Broker
-Restart your Debian app and run : ```sudo ./services scorpio```<br>
+## Step 6: Start Fiware Scorpio Broker
+Sample python application has been developed and tested with Scorpio Broker, so in order to run our app you may need to restart your Debian app and then run : ```sudo ./services scorpio```<br>
 This will takes few minutes to setup on first time and after installation and startup, it stays as a background service and you should be able to access back to your command console automatically.
 
 ## Step 7: Get your Broker's IP address
