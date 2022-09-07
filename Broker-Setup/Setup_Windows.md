@@ -1,10 +1,12 @@
 # Steps for Setting Up FIWARE Broker on Windows
 
 ## Prequisities
-Windows 10 or 8
+Windows 10
 
 ## Step 1: Install WSL 
-To install WSL on Windows follow the steps mention in Microsoft's website: https://docs.microsoft.com/en-us/windows/wsl/install
+Basic step to install, is to open command prompt as administrator and type **"wsl --install"**
+This will take some minutes to install and then require restart to complete full installation with Ubuntu app, wherein you would be prompted to setting user name and password.<br>For more details follow the steps mention in Microsoft's website: https://docs.microsoft.com/en-us/windows/wsl/install
+
 
 ## Step 2: Get Debian App from Windows Store
 Go to Windows Store and Search "Debian", that should direct you to Debian app as shown in Screenshot "DebianWindowsStore.JPG". Install it & open it -> this may take few minutes
