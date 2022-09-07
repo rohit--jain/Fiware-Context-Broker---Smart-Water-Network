@@ -25,8 +25,10 @@ If the Docker **Hello World** fails to run, check out **"Known Issue 2"** sectio
  
 ## Step 5: Install Broker from GitHub
 Usually Debian comes with pre installed Git. Since our implementation specifically focuses on NGSI-LD version, you can read more about it at:  https://github.com/FIWARE/tutorials.Getting-Started/tree/NGSI-LD.<br>
-[1] First navigate to your home directory with ```cd /home``` and there create a new directory where you want to install your Broker<br>
+[1] First navigate to your home directory with ```cd /home/<-YourUserName->``` and there create a new directory where you want to install your Broker<br>
 [2] Then using Git, follow install steps mentioned at https://github.com/FIWARE/tutorials.Getting-Started/tree/NGSI-LD#start-up and run these commands in your Debian app<br>
+[3] When you want to run for example, **Scorpio broker** use command: ```sudo ./services scorpio```<br>
+During the first startup it will take several minutes to download and initialize configurations before the startup completes.
 
 ## Step 6: Start Broker
 Restart your Debian app and run : ```sudo ./services scorpio```<br>
