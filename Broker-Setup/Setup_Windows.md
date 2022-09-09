@@ -1,7 +1,7 @@
 # Steps for Setting Up FIWARE Broker on Windows
 
 ## Prequisities
-Windows 10
+Windows 10 Operating System and Git for Windows Bash to run CURL commands in Windows.
 
 ## Step 1: Install WSL 
 Basic step to install, is to open command prompt as administrator and type : ```wsl --install```
@@ -26,7 +26,7 @@ If the Docker **Hello World** fails to run, check out **"Known Issue 2"** sectio
 ## Step 5: Install Broker from GitHub
 Usually Debian comes with pre installed Git. Since our implementation specifically focuses on NGSI-LD version, you can read more about it at:  https://github.com/FIWARE/tutorials.Getting-Started/tree/NGSI-LD.<br>
 [1] First navigate to your home directory with ```cd /home/<-YourUserName->``` and there create a new directory where you want to install your Broker<br>
-[2] Then using Git, follow install steps mentioned at https://github.com/FIWARE/tutorials.Getting-Started/tree/NGSI-LD#start-up and run these commands in your Debian app<br>
+[2] Then using Git, follow install steps mentioned at https://github.com/FIWARE/tutorials.Getting-Started/tree/NGSI-LD#start-up and run mentioned commands in your Debian app<br>
 [3] When you want to run for example, **Orion broker** use command: ```sudo ./services orion```<br>
 During the first startup it will take several minutes to download and initialize configurations before the startup completes.
 
@@ -42,7 +42,7 @@ IP-address would be required for connecting apps outside Debian to your broker w
 Note that IP-address gets changed after every reboot of the Debian app.<br>
 
 ## Step 8: Test Broker from Browser
-Open any browser and type in address bar: **http://[Broker-IP-address]:9090/** and you should see white webpage with heading **"Whitelabel Error Page"** with current date and time in the next lines. This indicates that the Broker is up and running and accessible outside Debian app on Windows.
+Open any browser and type in address bar: **http://[Broker-IP-address]:9090/** and you should see white webpage with heading **"Whitelabel Error Page"** with current date and time in the next lines. See the Screenshot **"WhitelabelErrorPage.JPG"**. This indicates that the Broker is up and running and accessible outside Debian app on Windows. 
 
 ## Step 9: Test your Broker with a Test Entity 
 In Debian app command shell use following CURL command:<br>
