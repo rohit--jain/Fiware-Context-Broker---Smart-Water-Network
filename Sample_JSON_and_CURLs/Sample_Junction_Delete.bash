@@ -1,0 +1,1 @@
+curl 192.168.101.115:9090/ngsi-ld/v1/entities/urn:ngsi:Junction:10 -X DELETE
