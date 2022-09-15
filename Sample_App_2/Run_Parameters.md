@@ -5,7 +5,7 @@
 
 **Application Parameters**
 
-python water-simulation.py --endpoint <broker-ip-address>:9090 --scenario <dummy-nonexistant-scenario> <sample-test-data>.json
+python water-simulation.py --endpoint '''<broker-ip-address>''':9090 --scenario '''<dummy-nonexistant-scenario>''' '''<sample-test-data>'''.json
   
 **endpoint** - Fiware Context Broker IP address & port number (For Scorpio 9090)
 
