@@ -1,0 +1,20 @@
+curl http://172.21.66.40:9090/ngsi-ld/v1/entities -s -S -H 'Content-Type: application/ld+json' -d @- <<EOF
+{
+  "id": "house2:smartrooms:room2",
+  "type": "Room",
+  "temperature": {
+        "value": 21,
+        "unitCode": "CEL",
+        "type": "Property",
+        "providedBy": {
+                "type": "Relationship",
+                "object": "smartbuilding:house2:sensor4711"
+        }
+  },
+  "isPartOf": {
+        "type": "Relationship",
+        "object": "smartcity:houses:house2"
+  },
+  "@context": [{"Room": "urn:mytypes:room", "temperature": "myuniqueuri:temperature", "isPartOf": "myuniqueuri:isPartOf"},"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"]
+}
+EOF

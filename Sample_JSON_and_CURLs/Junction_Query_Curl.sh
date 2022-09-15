@@ -1,0 +1,1 @@
+curl localhost:9090/ngsi-ld/v1/entities/?type=Junction -s -S -H 'Accept: application/ld+json' -H 'Link: <https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld>; rel="http://www.w3.org/ns/json-ld#context"; type="application/ld+json"'
