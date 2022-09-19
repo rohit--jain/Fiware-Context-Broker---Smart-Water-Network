@@ -13,4 +13,9 @@ python water-simulation.py --endpoint [broker-ip-address]:9090 --scenario [dummy
   
 **sample test data** - EPANET Simulation Test Data for Water Network Simulation - JSON file containing sample simulated values for Pumps, Junctions, Reservoir, Tanks, Pipes, Curves, Patterns and Networks<br>
 
+** Query the Entity in Browser**<br>
+In your Browser check the entity which you just sent by preparing URL in following pattern:<br>
+
+http://[Broker-IP-Address]:9090/ngsi-ld/v1/entities/[Entity-ID]
+
   
