@@ -5,8 +5,10 @@ Windows 10 Operating System and Git for Windows Bash to run CURL commands in Win
 
 ## Step 1: Install WSL 
 Basic step to install, is to open command prompt as administrator and type : ```wsl --install```
-This will take some minutes to install and then require restart to complete full installation with Ubuntu app, wherein you would be prompted to setting user name and password.<br>For more details follow the steps mention in Microsoft's website: https://docs.microsoft.com/en-us/windows/wsl/install
+This will take some minutes to install and then require restart to complete full installation with Ubuntu app, wherein you would be prompted to setting user name and password.<br>For more details follow the steps mention in Microsoft's website: https://docs.microsoft.com/en-us/windows/wsl/install<br>
 
+You may have to install Windows Linux Kernel update which you can find via the following website: 
+https://learn.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package
 
 ## Step 2: Get Debian App from Windows Store
 Go to Windows Store and Search "Debian", that should direct you to Debian app as shown in Screenshot "DebianWindowsStore.JPG".<br>
@@ -72,16 +74,22 @@ If it runs correctly there should be blank response and no error message in outp
 **Note [1]:** If you executed this CURL command in past you will get error message about entity already exists, which still indicates normal functioning of Broker.<br>
 **Note [2]:** You can replace localhost with Broker-IP-Address for running outside Debian app.<br>
 
-## Step 10: To delete a pre-existing entity
+## Step 10: Query the Entity we just sent
+To Query the entity which we just sent you can type into addressbar of your browser:<br>
+```
+http://[Broker-IP-address]:9090/ngsi-ld/v1/entities/house2:smartrooms:room2
+```
+
+## Step 11: To delete a pre-existing entity
 Suppose you want to delete the previous inserted entity, you can use the following CURL command: <br>
 ```
 curl http://[Broker-IP-address]:9090/ngsi-ld/v1/entities/house2:smartrooms:room2 -X DELETE 
 ```
 
-## Step 11: Checking Scorpio Broker logs
+## Step 12: Checking Scorpio Broker logs
 In Debian app run the following command: ```sudo docker compose logs scorpio```
 
-## Step 12: How to safely shutdown Broker
+## Step 13: How to safely shutdown Broker
 [1] Inside command shell of Debian type : ```sudo ./services stop```<br>
 That should stop all running docker containers for Broker.<br>
 [2] To close the Debian app run command: ```exit```<br>
